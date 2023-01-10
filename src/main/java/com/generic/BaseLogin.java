@@ -47,6 +47,20 @@ public class BaseLogin {
 		HighLighter.getColor(driver, pf.getWelcome().get(0), "green");
 		ScreenShot.getScreenShot(driver, "LoginValidation");
 		boolean status = pf.getWelcome().get(0).isDisplayed();
+		
+		
+//		1)	Go to the application product and select the woman’s section
+//		(URL =https://magento.softwaretestingboard.com/)
+		pf.getWoman().click();
+		HighLighter.getColor(driver, pf.getWoman(), "black");
+		
+//		2)	Find out all prices and all product names in the hot seller section
+		pf.getHotSeller().click();
+		HighLighter.getColor(driver, pf.getHotSeller(), "green");
+//		3)	Go to hot sellers and find out the highest & lowest prices with the dress name
+		
+		
+		
 		SoftAssert sa = new SoftAssert();
 		sa.assertTrue(status);
 		sa.assertAll();

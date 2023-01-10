@@ -26,6 +26,23 @@ public class SeleniumPageFactory {
 	@FindBy(xpath ="//*[@class='greet welcome']")
 	private List<WebElement> welcome;
 	
+	
+//	1==> women section//*[@id='ui-id-4']
+	@FindBy(xpath ="//*[@id='ui-id-4']")		
+	private WebElement woman;
+
+	public WebElement getWoman() {
+		return woman;
+	}
+
+	//2==>hot seller //*[@class='content-heading']\ 
+	@FindBy(xpath ="//*[@class='content-heading']")
+    public WebElement hotSeller;
+
+	public WebElement getHotSeller() {
+		return hotSeller;
+	}
+
 
 	//costco web site
 	@FindBy(xpath ="//*[text()='Sign In / Register']")
